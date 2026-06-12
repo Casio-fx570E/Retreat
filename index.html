@@ -454,33 +454,35 @@
   }
   .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;   /* элементы идут сверху вниз */
+    align-items: center;      /* центрируем по горизонтали */
+    gap: 12px;                /* расстояние между кнопкой и иконкой */
   }
 
 
 
-  /* Стиль для иконки VK (текстовая) */
-  .vk-icon {
+
+  .vk-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #4680c2;  /* цвет VK */
+    background: #4680c2;      /* цвет фона как у VK */
     color: white;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;  /* можно сделать кружок: 50% */
+    border-radius: 8px;
+    padding: 8px;             /* небольшой отступ вокруг иконки */
     text-decoration: none;
     transition: 0.2s;
+    width: 36px;              /* фиксированный размер для аккуратности */
+    height: 36px;
   }
 
-  .vk-icon:hover {
-    background: #3b6e9e;
+  .vk-link:hover {
+    background: #3b6e9e;      /* затемнение при наведении */
     transform: scale(1.05);
+  }
+
+  .vk-link i {
+    font-size: 20px;
   }
   /* ── FOOTER ── */
   footer {
@@ -689,11 +691,11 @@
     Места ограничены. Заявка — первый шаг к двум дням, которые вы долго будете вспоминать.
   </p>
   <div class="buttons">
-  <button id="button1" class="cta-btn">Оставить заявку</button>
-  <a href="https://vk.me/join/ixiWhOgUa5fCrLeGCXa4nNAjQQ5sbQAHPiE=" target="_blank" aria-label="VK" class="vk-icon">
-    VK
+    <button id="button1" class="cta-btn">Оставить заявку</button>
+    <a href="https://vk.me/join/ixiWhOgUa5fCrLeGCXa4nNAjQQ5sbQAHPiE=" target="_blank" aria-label="VK" class="vk-link">
+    <i class="fa fa-vk fa-lg"></i>
   </a>
-</div>
+  </div>
   <p class="cta-note">Мы свяжемся с вами в течение 24 часов</p>
 </section>
 
